@@ -1,6 +1,192 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh; /*vh is short for "view height" so it sets it to 100% of whatever the view height of the device is. */
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+.Locator {
+  position: absolute;
+  z-index: 100;
+  font-size: 70px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  top: 70px;
+  left: 100px;
+}
+
+.searchContainer {
+  display: flex;
+  position: absolute;
+  z-index: 100;
+  top: 180px;
+  left: 100px;
+  width: 400px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #333;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.searchContainer input {
+  width: 100%;
+  font-size: 25px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.searchContainer input:focus {
+  outline: none;
+}
+.classSearch {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.classSearch i {
+  color: white;
+  cursor:pointer;
+}
+
+.stores-list-container {
+  display: flex;
+  width: 420px;
+  /*height: 300px;
+    */
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+  top: 260px;
+  left: 100px;
+  border-radius: 30px;
+  padding-bottom: 20px;
+  overflow-y: hidden;
+  bottom: 20px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.stores-list {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+.stores-container {
+  cursor: pointer;
+  border-bottom: 1px solid #979797;
+  width: 350px;
+  margin-left: 12px;
+  margin-top: 15px;
+  height: 120px;
+  padding-left: 20px;
+  padding-top: 8px;
+  color: #514c4c;
+  transition: all 0.2 ease-in-out;
+  -webkit-transition: all 0.2 ease-in-out;
+  -moz-transition: all 0.2 ease-in-out;
+  -ms-transition: all 0.2 ease-in-out;
+  -o-transition: all 0.2 ease-in-out;
+}
+
+.stores-container:hover {
+  margin-top: 15px;
+  margin-left: 12px;
+  border: 1px solid gray;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: lightgray;
+}
+
+.store-info-container {
+  flex-grow: 1;
+}
+.store-address span {
+  display: block;
+}
+
+.store-address {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.store-number {
+  position: relative;
+  top: 20px;
+  font-size: 14px;
+  color: gray;
+}
+
+.store-number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dot {
+  position: relative;
+  left: 150px;
+  bottom: 35px;
+  height: 30px;
+  width: 30px;
+  background-color: #b5adad;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#StatusStyle {
+  display: flex;
+  align-items: center;
+  height: 4vh;
+  width: 25vh;
+  border-bottom: 1px solid darkgray;
+}
+
+.dotMarker {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #1c778c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.LinkSpace div{
+  margin-top:10px;
+
+}
+
+.addressLink {
+  position: relative;
+  left: 45px;
+  bottom: 23px;
+}
+
+.addressLink a  {
+  color:#1c778c;
+  text-decoration: none;
+}
+
+.addressLink a:hover{
+  color:orange;
+}
+
